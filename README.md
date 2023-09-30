@@ -6,4 +6,4 @@ This is a repo where I will store all the chapters of [learnopengl](https://lear
 - [mach-glfw](https://github.com/hexops/mach-glfw)
 - [zgl](https://github.com/ziglibs/zgl)
 - [zstbi from the zig-gamedev repo](https://github.com/michal-z/zig-gamedev)
-- [zlm](https://github.com/ziglibs/zlm)
+- [zalgebra](https://github.com/kooparse/zalgebra)

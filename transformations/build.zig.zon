@@ -10,9 +10,9 @@
 		    .url = "https://github.com/ziglibs/zgl/archive/81d6990d2849ffd2d082f6ae364a03cc0162ba7e.tar.gz",
 			.hash = "122079101336f0a641542a9b474203df86f96f600acd67517318acb2a1fbe5e0b6cb",
 		},
-		.zlm = .{
-			.url = "https://github.com/ziglibs/zlm/archive/cd287529acbc292519972c1f0e4a53888e584021.tar.gz",
-			.hash = "12205e94c411e1c971f2e1497de5608088f1eebdc3d2ac7191f5e1346761fb326f90",
-		}
+    .zalgebra = .{
+        .url = "https://github.com/kooparse/zalgebra/archive/23aaf89db3b2a9940fd5dfa81e10e9e6f8345ea1.tar.gz",
+        .hash = "1220e7feb5be6842dbc0d20a2a9922e5a61610bfbd3039d7497b0722be5662c603e4",
+      }
 	}
 }

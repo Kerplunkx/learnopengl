@@ -23,8 +23,8 @@ pub fn build(b: *std.Build) void {
     const zgl = b.dependency("zgl", .{});
     exe.addModule("zgl", zgl.module("zgl"));
     zstbi_pkg.link(exe);
-    const zlm = b.dependency("zlm", .{});
-    exe.addModule("zlm", zlm.module("zlm"));
+    const zalgebra = b.dependency("zalgebra", .{});
+    exe.addModule("zalgebra", zalgebra.module("zalgebra"));
 
     b.installArtifact(exe);
 

@@ -1,6 +1,6 @@
 const std = @import("std");
 const gl = @import("zgl");
-const zlm = @import("zlm");
+const za = @import("zalgebra");
 
 id: gl.Program,
 
@@ -51,24 +51,24 @@ pub fn setBool(self: @This(), name: [:0]const u8, value: bool) void {
     gl.uniform1f(location, value);
 }
 
-pub fn setVec2(self: @This(), name: [:0]const u8, value: zlm.Vec2) void {
+pub fn setVec2(self: @This(), name: [:0]const u8, value: za.Vec2) void {
     const location = gl.getUniformLocation(self.id, name);
-    gl.uniform2fv(location, &.{[_]f32{ value.x, value.y }});
+    gl.uniform2fv(location, &.{value.data});
 }
 
-pub fn setVec3(self: @This(), name: [:0]const u8, value: zlm.Vec3) void {
+pub fn setVec3(self: @This(), name: [:0]const u8, value: za.Vec3) void {
     const location = gl.getUniformLocation(self.id, name);
-    gl.uniform3fv(location, &.{[_]f32{ value.x, value.y, value.z }});
+    gl.uniform3fv(location, &.{value.data});
 }
 
-pub fn setVec4(self: @This(), name: [:0]const u8, value: zlm.Vec4) void {
+pub fn setVec4(self: @This(), name: [:0]const u8, value: za.Vec4) void {
     const location = gl.getUniformLocation(self.id, name);
-    gl.uniform4fv(location, &.{[_]f32{ value.x, value.y, value.z, value.w }});
+    gl.uniform4fv(location, &.{value.data});
 }
 
-pub fn setMat4(self: @This(), name: [:0]const u8, value: zlm.Mat4) void {
+pub fn setMat4(self: @This(), name: [:0]const u8, value: za.Mat4) void {
     const location = gl.getUniformLocation(self.id, name);
-    gl.uniformMatrix4fv(location, false, &.{value.fields});
+    gl.uniformMatrix4fv(location, false, &.{value.data});
 }
 
 fn checkCompileErrors(shader: gl.UInt, Type: []const u8) void {

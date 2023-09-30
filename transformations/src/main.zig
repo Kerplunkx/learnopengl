@@ -1,7 +1,7 @@
 const std = @import("std");
 const glfw = @import("mach-glfw");
 const gl = @import("zgl");
-const zlm = @import("zlm");
+const za = @import("zalgebra");
 const stb = @import("zstbi");
 const shader = @import("Shader.zig");
 
@@ -122,9 +122,9 @@ pub fn main() !void {
         gl.activeTexture(.texture_1);
         texture2.bind(.@"2d");
 
-        var transform = zlm.Mat4.identity;
-        transform = transform.mul(zlm.Mat4.createAngleAxis(zlm.Vec3.unitZ, -@as(f32, @floatCast(glfw.getTime()))));
-        transform = transform.mul(zlm.Mat4.createTranslation(zlm.Vec3.new(0.5, -0.5, 0.0)));
+        // We can "chain" operations like this
+        var transform = za.Mat4.identity().rotate(@as(f32, @floatCast(glfw.getTime())), za.Vec3.new(0.0, 0.0, 3.0));
+        transform = transform.translate(za.Vec3.new(0.5, -0.5, 0.0));
 
         shader_program.use();
         shader_program.setMat4("transform", transform);
