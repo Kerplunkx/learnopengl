@@ -1,0 +1,18 @@
+.{
+  .name = "camera",
+	.version = "0.0.1",
+	.dependencies = .{
+		.mach_glfw = .{
+		    .url = "https://pkg.machengine.org/mach-glfw/321efd4065b57e31d8ab0bce720852c1d680d443.tar.gz",
+        .hash = "122002e355cf42b8d257efc95229c9ee6be4cca189c1718f86179cb7c21225beeb75",
+		},
+		.zgl = .{
+		    .url = "https://github.com/ziglibs/zgl/archive/81d6990d2849ffd2d082f6ae364a03cc0162ba7e.tar.gz",
+        .hash = "122079101336f0a641542a9b474203df86f96f600acd67517318acb2a1fbe5e0b6cb",
+		},
+    .zalgebra = .{
+        .url = "https://github.com/kooparse/zalgebra/archive/23aaf89db3b2a9940fd5dfa81e10e9e6f8345ea1.tar.gz",
+        .hash = "1220e7feb5be6842dbc0d20a2a9922e5a61610bfbd3039d7497b0722be5662c603e4",
+      }
+	}
+}
